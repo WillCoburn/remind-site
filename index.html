@@ -21,14 +21,12 @@
     a { color: var(--brand); text-decoration: none; }
     ul { padding-left: 1.25rem; }
 
-    /* Image styles */
-    img.mock { width: 100%; max-width: 380px; border: 1px solid #eee; border-radius: 12px; }
-
-    /* Layout grids */
+    /* Screenshots grid */
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
     .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; align-items: start; }
 
-    /* Captions */
+    /* Image and captions */
+    img.mock { width: 100%; max-width: 380px; border: 1px solid #eee; border-radius: 12px; display: block; margin: 0 auto; }
     figure { margin: 0; }
     figcaption { text-align: center; color: #666; font-size: .85rem; margin-top: .35rem; }
 
@@ -62,27 +60,23 @@
         </blockquote>
 
         <div class="grid">
-          <!-- LEFT: two screenshots inline, no links required -->
           <div>
             <div class="shots">
               <figure>
                 <img class="mock"
-                     src="https://github.com/user-attachments/assets/6d5be171-86bf-4b74-9923-48a2cde1ae2c"
-                     alt="ReMind onboarding screen — consent checked"
-                     loading="lazy" />
+                     src="https://github.com/user-attachments/assets/54a50029-000b-4938-9cd4-4df85dc677bf"
+                     alt="Onboarding — consent checked" loading="lazy" />
                 <figcaption>Onboarding — consent checked</figcaption>
               </figure>
               <figure>
                 <img class="mock"
-                     src="SECOND_SCREENSHOT_URL_HERE"
-                     alt="ReMind onboarding screen — consent unchecked"
-                     loading="lazy" />
+                     src="https://github.com/user-attachments/assets/a942350e-e966-4e86-a4d6-08b9f42d7d79"
+                     alt="Onboarding — consent unchecked" loading="lazy" />
                 <figcaption>Onboarding — consent unchecked</figcaption>
               </figure>
             </div>
           </div>
 
-          <!-- RIGHT: copy unchanged -->
           <div>
             <h3>Opt-Out &amp; Support Keywords</h3>
             <ul>
