@@ -21,15 +21,12 @@
     a { color: var(--brand); text-decoration: none; }
     ul { padding-left: 1.25rem; }
 
-    /* Screenshots grid */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
-    .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; align-items: start; }
-
-    /* Image and captions */
+    /* Screenshot styling */
     img.mock { width: 100%; max-width: 380px; border: 1px solid #eee; border-radius: 12px; display: block; margin: 0 auto; }
-    figure { margin: 0; }
+    figure { margin: 0; text-align: center; }
     figcaption { text-align: center; color: #666; font-size: .85rem; margin-top: .35rem; }
 
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
     .muted { color: #666; font-size: .95rem; }
     .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
   </style>
@@ -56,25 +53,18 @@
         <h2>How Users Opt In (In-App)</h2>
         <p>Users opt in during onboarding inside the ReMind app. They enter their phone number and agree to receive reminder texts. Below is the exact consent language used in the app:</p>
         <blockquote>
-          By tapping <strong>Agree</strong>, you consent to receive reminder text messages from ReMind to the phone number you provide. Message &amp; data rates may apply. Reply <strong>STOP</strong> to opt out, or <strong>HELP</strong> for support.
+          By tapping <strong>Agree</strong>, you consent to receive reminder text messages from ReMind to the phone number you provide. Message &amp; data rates may apply. Message frequency varies based on your settings and activity. Reply <strong>STOP</strong> to opt out, or <strong>HELP</strong> for support.
         </blockquote>
 
         <div class="grid">
           <div>
-            <div class="shots">
-              <figure>
-                <img class="mock"
-                     src="https://github.com/user-attachments/assets/a942350e-e966-4e86-a4d6-08b9f42d7d79"
-                     alt="Onboarding — consent checked" loading="lazy" />
-                <figcaption>Onboarding — consent checked</figcaption>
-              </figure>
-              <figure>
-                <img class="mock"
-                     src="https://github.com/user-attachments/assets/54a50029-000b-4938-9cd4-4df85dc677bf"
-                     alt="Onboarding — consent unchecked" loading="lazy" />
-                <figcaption>Onboarding — consent unchecked</figcaption>
-              </figure>
-            </div>
+            <figure>
+              <img class="mock"
+                   src="UNCHECKED_IMG_URL"
+                   alt="ReMind onboarding screen — consent unchecked"
+                   loading="lazy" />
+              <figcaption>Onboarding — consent unchecked</figcaption>
+            </figure>
           </div>
 
           <div>
