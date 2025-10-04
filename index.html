@@ -22,7 +22,15 @@
     ul { padding-left: 1.25rem; }
 
     /* Screenshot styling */
-    img.mock { width: 100%; max-width: 380px; border: 1px solid #eee; border-radius: 12px; display: block; margin: 0 auto; }
+    img.mock {
+      width: 100%;
+      max-width: 380px;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      display: block;
+      margin: 1rem auto;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
     figure { margin: 0; text-align: center; }
     figcaption { text-align: center; color: #666; font-size: .85rem; margin-top: .35rem; }
 
@@ -58,9 +66,10 @@
 
         <div class="grid">
           <div>
+            <!-- Inline screenshot -->
             <figure>
               <img class="mock"
-                   src="UNCHECKED_IMG_URL"
+                   src="https://github.com/user-attachments/assets/a942350e-e966-4e86-a4d6-08b9f42d7d79"
                    alt="ReMind onboarding screen — consent unchecked"
                    loading="lazy" />
               <figcaption>Onboarding — consent unchecked</figcaption>
@@ -73,40 +82,4 @@
               <li><strong>STOP</strong>: Immediately stops all messages and confirms opt-out.</li>
               <li><strong>HELP</strong>: Sends support contact and summary of program terms.</li>
             </ul>
-            <p class="muted">These keywords are supported in our messaging flow.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="card">
-        <h2>Program Disclosures</h2>
-        <ul>
-          <li><strong>Program Name:</strong> ReMind</li>
-          <li><strong>Program Description:</strong> User-authored reminder SMS messages</li>
-          <li><strong>Opt-In Method:</strong> In-app onboarding with explicit consent</li>
-          <li><strong>Opt-Out Method:</strong> Reply STOP</li>
-          <li><strong>Support:</strong> Reply HELP or email <a href="mailto:remindapphelp@gmail.com">remindapphelp@gmail.com</a></li>
-          <li><strong>Fees:</strong> Message &amp; data rates may apply</li>
-          <li><strong>Message Frequency:</strong> Varies by user settings and activity</li>
-          <li><strong>Privacy &amp; Terms:</strong> See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <div class="card">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:remindapphelp@gmail.com">remindapphelp@gmail.com</a></p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <p>© 2025 ReMind by Will Coburn</p>
-    </div>
-  </footer>
-</body>
-</html>
+            <p
