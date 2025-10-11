@@ -37,6 +37,19 @@
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
     .muted { color: #666; font-size: .95rem; }
     .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+    /* Link buttons */
+    .linkrow { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; }
+    .btnlink {
+      display: inline-block;
+      padding: .5rem .75rem;
+      border: 1px solid #e6e6e6;
+      border-radius: 8px;
+      background: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btnlink:hover { border-color: #d5d5d5; background: #f9f9f9; }
   </style>
 </head>
 <body>
@@ -51,7 +64,7 @@
     <section>
       <div class="card">
         <h2>About ReMind</h2>
-        <p><strong>ReMind</strong> is a mobile app that helps you celebrate your moments of clarity. Users jot down their affirmations, epiphones, and meaningful realizations as they come so that they can be reminded of them later via text message. Messages are only sent to users who voluntarily provide their phone number and consent during onboarding in the app.</p>
+        <p><strong>ReMind</strong> is a mobile app that helps you celebrate your moments of clarity. Users jot down their affirmations, epiphanies, and meaningful realizations as they come so that they can be reminded of them later via text message. Messages are only sent to users who voluntarily provide their phone number and consent during onboarding in the app.</p>
         <p class="muted">Use case category: <span class="mono">Customer Care / Productivity</span> (self-authored reminders).</p>
       </div>
     </section>
@@ -59,7 +72,7 @@
     <section>
       <div class="card">
         <h2>How Users Opt In (In-App)</h2>
-        <p>Users opt in during onboarding inside the ReMind app. They enter their phone number and agree to receive reminder texts. Users have to click the consent box to continue - the "Agree to Continue" button remains unclickable until then. Below is the exact consent language used in the app:</p>
+        <p>Users opt in during onboarding inside the ReMind app. They enter their phone number and agree to receive reminder texts. Users must actively select the consent checkbox before the “Agree to Continue” button becomes enabled. Below is the exact consent language used in the app:</p>
         <blockquote>
           By tapping <strong>Agree</strong>, you consent to receive reminder text messages from ReMind to the phone number you provide. Message &amp; data rates may apply. Message frequency varies based on your settings and activity. Reply <strong>STOP</strong> to opt out, or <strong>HELP</strong> for support.
         </blockquote>
@@ -72,7 +85,7 @@
                    src="https://github.com/user-attachments/assets/e31ec297-dded-40ac-b3bc-d5276d04f1b8"
                    alt="ReMind onboarding screen — consent unchecked"
                    loading="lazy" />
-              <figcaption>Onboarding — consent defaults to uncheckeded</figcaption>
+              <figcaption>Onboarding — consent defaults to unchecked</figcaption>
             </figure>
           </div>
 
@@ -82,4 +95,40 @@
               <li><strong>STOP</strong>: Immediately stops all messages and confirms opt-out.</li>
               <li><strong>HELP</strong>: Sends support contact and summary of program terms.</li>
             </ul>
-            <p
+            <p class="muted">Users can also manage participation from within the app at any time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: Program Terms & Policies section -->
+    <section>
+      <div class="card">
+        <h2>Program Terms &amp; Policies</h2>
+        <p>For full details on data handling, user rights, and messaging practices, please review the documents below:</p>
+        <div class="linkrow">
+          <a class="btnlink" href="https://willcoburn.github.io/remind-site/privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+          <a class="btnlink" href="https://willcoburn.github.io/remind-site/terms.html" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+        </div>
+        <p class="muted">These links are the same documents referenced inside the ReMind app during onboarding.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div style="display:flex; gap:.75rem; flex-wrap:wrap; align-items:center;">
+        <span>&copy; <span id="y"></span> ReMind</span>
+        <span aria-hidden="true">·</span>
+        <a href="https://willcoburn.github.io/remind-site/privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://willcoburn.github.io/remind-site/terms.html" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+      </div>
+    </div>
+    <script>
+      // Set current year in footer
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
